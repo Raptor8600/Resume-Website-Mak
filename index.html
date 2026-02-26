@@ -615,87 +615,117 @@
       <p>&copy; <span id="year">2026</span> Raptor. All rights reserved.</p>
 
       <div style="margin-top: 10px; opacity: 0.3; font-size: 0.8rem;">
-        <a href="#" id="admin-trigger">Admin</a>
+        <a href="javascript:void(0)" id="admin-trigger">Admin</a>
       </div>
     </div>
   </footer>
 
   <!-- Admin Bar (Hidden by default) -->
-  <div id="admin-bar" class="admin-bar hidden" data-admin-only="true" style="display:none;">
+  <div id="admin-bar" class="admin-bar" data-admin-only="true">
     <div class="container admin-bar-content">
-      <div><strong>Edit Mode</strong></div>
-      <div style="display: flex; gap: 1rem;">
+      <div>
+        <strong>Edit Mode</strong>
+      </div>
+      <div class="admin-actions">
+
         <button id="save-btn" class="btn btn-sm btn-gold" data-admin-only="true">Save Changes</button>
+
         <button id="cancel-btn" class="btn btn-sm btn-outline" data-admin-only="true"
           style="border-color: white; color: white;">Discard</button>
       </div>
-    </div>
-  </div>
 
-  <!-- AUTH MODAL -->
-  <div id="auth-modal" class="auth-modal hidden">
-    <div class="auth-box">
-      <span id="auth-close" class="auth-close">&times;</span>
-      <h2 id="auth-title">Log In</h2>
-      <form id="auth-form">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required placeholder="you@example.com">
+      <!-- Theme Panel (admin-only) -->
+      <div id="theme-panel" class="theme-panel" data-admin-only="true">
+        <div class="theme-row">
+          <label for="theme-primary-text">Primary Text</label>
+          <input type="color" id="theme-primary-text" value="#FFFFFF" />
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" required placeholder="••••••••">
-        </div>
-        <button type="submit" id="auth-submit" class="btn btn-gold" style="width: 100%;">Log In</button>
-      </form>
-      <a id="auth-toggle" class="auth-toggle-link">Don't have an account? Sign Up</a>
-    </div>
-  </div>
 
-  <!-- SUCCESS MODAL -->
-  <div id="success-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="success-title">Resume Saved!</h2>
-        <button id="success-close" class="close-btn">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Your resume has been successfully saved.</p>
-        <p>You can share your resume using this public link:</p>
-        <div class="share-link-container">
-          <input type="text" id="share-link-input" readonly value="Generating.">
-          <button id="copy-link-btn" class="btn-primary">Copy</button>
+        <div class="theme-row">
+          <label for="theme-secondary-text">Accent Text</label>
+          <input type="color" id="theme-secondary-text" value="#2C3E50" />
         </div>
-        <div class="modal-actions">
-          <a href="#" target="_blank" id="preview-link-btn" class="btn-outline">Open Public View</a>
+
+        <div class="theme-row">
+          <label for="theme-bg-text">Background Text</label>
+          <input type="color" id="theme-bg-text" value="#2C3E50" />
+        </div>
+
+        <div class="theme-row">
+          <label for="theme-surface-text">Cards Text</label>
+          <input type="color" id="theme-surface-text" value="#2C3E50" />
+        </div>
+
+        <div class="theme-row">
+          <label for="theme-experience-bg">Experience Section</label>
+          <input type="color" id="theme-experience-bg" value="#eaeff2" />
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- WATERMARK -->
-  <div id="careercraftr-watermark" class="hidden">
-    Powered by <strong>CareerCraftr</strong> - Create your resume for free.
-  </div>
-
-  <!-- DEVELOPER INFO MODAL -->
-  <div id="dev-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>About CareerCraftr</h2>
-        <button id="dev-close" class="close-btn">&times;</button>
+      <!-- AUTH MODAL -->
+      <div id="auth-modal" class="auth-modal hidden">
+        <div class="auth-box">
+          <span id="auth-close" class="auth-close">&times;</span>
+          <h2 id="auth-title">Log In</h2>
+          <form id="auth-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" required placeholder="••••••••">
+            </div>
+            <button type="submit" id="auth-submit" class="btn btn-gold" style="width: 100%;">Log In</button>
+          </form>
+          <a id="auth-toggle" class="auth-toggle-link">Don't have an account? Sign Up</a>
+        </div>
       </div>
-      <div class="modal-body">
-        <p><strong>CareerCraftr</strong> is a professional interactive resume builder.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+      <!-- SUCCESS MODAL -->
+      <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="success-title">Resume Saved!</h2>
+            <button id="success-close" class="close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>Your resume has been successfully saved.</p>
+            <p>You can share your resume using this public link:</p>
+            <div class="share-link-container">
+              <input type="text" id="share-link-input" readonly value="Generating.">
+              <button id="copy-link-btn" class="btn-primary">Copy</button>
+            </div>
+            <div class="modal-actions">
+              <a href="#" target="_blank" id="preview-link-btn" class="btn-outline">Open Public View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WATERMARK -->
+      <div id="careercraftr-watermark" class="hidden">
+        Powered by <strong>CareerCraftr</strong> - Create your resume for free.
+      </div>
+
+      <!-- DEVELOPER INFO MODAL -->
+      <div id="dev-modal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>About CareerCraftr</h2>
+            <button id="dev-close" class="close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p><strong>CareerCraftr</strong> is a professional interactive resume builder.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scripts -->
+      <script src="script.js" defer></script>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
 
 </body>
 
