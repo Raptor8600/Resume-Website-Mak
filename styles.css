@@ -23,8 +23,8 @@
     --color-text-white: #FFFFFF;
 
     /* Typography */
-    --font-heading: 'Caveat', 'Playfair Display', serif;
-    --font-body: 'Istok Web', 'Inter', sans-serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
