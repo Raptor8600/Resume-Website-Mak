@@ -2,24 +2,24 @@
 :root {
     /* Colors */
     /* Colors */
-    --color-primary: #556B2F;
-    /* Earthy Olive Green */
-    --color-primary-light: #6B8E23;
-    --color-secondary: #e2a8a8;
-    /* Soft Dusty Rose */
-    --color-secondary-hover: #c98e8e;
+    --color-primary: #89CFF0;
+    /* Baby Blue */
+    --color-primary-light: #B2EBF2;
+    --color-secondary: #5CACE2;
+    /* Clear Blue */
+    --color-secondary-hover: #4FA3D1;
 
-    --color-bg-white: #fdfbf7;
-    --color-bg-light: #f4f1ea;
+    --color-bg-white: #FDFDFF;
+    --color-bg-light: #F0F8FF;
 
     --color-surface: #FFFFFF;
     /* cards / panels / bright middle */
 
-    /* Deep forest */
-    --color-bg-dark: #2F3E21;
+    /* Deep Ocean Blue */
+    --color-bg-dark: #003B5C;
 
-    --color-text-main: #2C3E20;
-    --color-text-light: #5F6B58;
+    --color-text-main: #002B49;
+    --color-text-light: #546E7A;
     --color-text-white: #FFFFFF;
 
     /* Typography */
@@ -38,9 +38,9 @@
 
     /* “On color” text (used on top of backgrounds) */
     --color-on-primary: #FFFFFF;
-    --color-on-secondary: #2C3E20;
-    --color-on-bg: #2C3E20;
-    --color-on-surface: #2C3E20;
+    --color-on-secondary: #002B49;
+    --color-on-bg: #002B49;
+    --color-on-surface: #002B49;
 
     /* Section-specific */
     --color-experience-bg: var(--color-bg-light);
@@ -184,7 +184,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(47, 62, 33, 0.95) 0%, rgba(47, 62, 33, 0.7) 70%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(0, 59, 92, 0.95) 0%, rgba(0, 59, 92, 0.7) 70%, transparent 100%);
     backdrop-filter: blur(5px);
     z-index: 1000;
     padding: 1.5rem 0 2rem 0;
@@ -252,7 +252,7 @@ img {
     position: relative;
     /* Whimsical Forest Background */
     background-color: var(--color-primary);
-    background: linear-gradient(135deg, #556B2F 0%, #2F3E21 100%);
+    background: linear-gradient(135deg, #89CFF0 0%, #003B5C 100%);
     overflow: hidden;
     color: white;
     /* Default text color for hero */
@@ -266,8 +266,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 20% 50%, rgba(24, 188, 156, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    background-image: radial-gradient(circle at 20% 50%, rgba(137, 207, 240, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -302,7 +302,7 @@ img {
 
 .hero h2 {
     font-size: 2.2rem;
-    color: #FADADD;
+    color: #B2EBF2;
     font-weight: 400;
     margin-bottom: 1.5rem;
     font-family: var(--font-heading);
@@ -349,7 +349,7 @@ img {
 .profile-photo-placeholder {
     width: 350px;
     height: 350px;
-    background-color: #556B2F;
+    background-color: #89CFF0;
     /* Earthy placeholder bg */
     border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
     /* Organic whimsical shape */
@@ -447,7 +447,7 @@ img {
     background-color: transparent;
     border-left: none;
     box-shadow: none;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 59, 92, 0.1);
     padding-top: 2rem;
     text-align: left;
 }
@@ -484,7 +484,7 @@ img {
     padding: 0;
     border-radius: 0;
     text-align: left;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 59, 92, 0.1);
     padding-top: 2rem;
 }
 
@@ -675,7 +675,7 @@ img {
 
 .exp-meta {
     text-align: right;
-    color: #8899A6;
+    color: #78909C;
     font-size: 0.9rem;
     line-height: 1.4;
     flex-shrink: 0;
@@ -766,7 +766,7 @@ img {
 footer {
     padding: 2rem 0;
     background-color: var(--color-bg-dark);
-    color: #6B7C93;
+    color: #546E7A;
     text-align: center;
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
